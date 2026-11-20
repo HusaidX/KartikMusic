@@ -10,11 +10,25 @@
 
 import asyncio
 import importlib
+import os
 import signal
 from contextlib import suppress
 
+from aiohttp import web
+
 from KartikMusic import Kartik, app, config, db, logger, stop, thumb, userbot, yt
 from KartikMusic.plugins import all_modules
+
+
+async def start_web_server():
+    server = web.Application()
+    server.router.add_get("/", lambda request: web.Response(text="Bot is running!"))
+    runner = web.AppRunner(server)
+    await runner.setup()
+    port = int(os.environ.get("PORT", 8080))
+    site = web.TCPSite(runner, "0.0.0.0", port)
+    await site.start()
+    logger.info(f"Web server started on port {port}.")
 
 
 async def idle():
@@ -28,6 +42,7 @@ async def idle():
 
 
 async def main():
+    await start_web_server()
     await db.connect()
     await thumb.start()
     await app.boot()
