@@ -192,7 +192,7 @@ class Inline:
         return self.ikm(rows)
 
     def ping_markup(self, text: str) -> types.InlineKeyboardMarkup:
-        return self.ikm([[self.ikb(text=text, url=config.SUPPORT_CHAT)]])
+        return self.ikm([[self.ikb(text=text, url="https://t.me/SonicXBots")]])
 
     def play_queued(
         self, chat_id: int, item_id: str, _text: str
@@ -299,16 +299,16 @@ class Inline:
             ],
             [self.ikb(text=lang["help"], callback_data="help")],
             [
-                self.ikb(text=lang["support"], url=config.SUPPORT_CHAT),
-                self.ikb(text=lang["channel"], url=config.SUPPORT_CHANNEL),
+                self.ikb(text="Updates • SonicXBots", url="https://t.me/SonicXBots"),
+                self.ikb(text="Powered by Apni Duniya", url="https://t.me/Apni_duniyax"),
             ],
         ]
         if private:
             rows += [
                 [
                     self.ikb(
-                        text="Owner",
-                        user_id=config.OWNER_ID,
+                        text="Owner • Apni Duniya",
+                        url="https://t.me/Apni_duniyax",
                     )
                 ]
             ]
