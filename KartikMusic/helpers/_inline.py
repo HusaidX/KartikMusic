@@ -105,7 +105,7 @@ class Inline:
                     [
                         self.ikb(
                             text=lang["add_mee"] if lang else "Add Me",
-                            url=f"https://t.me/{app.username}?startgroup=true",
+                            url="https://t.me/TGSonicXbot?startgroup=true",
                         ),
                         self.ikb(
                             text="Close ✘", callback_data=f"controls close {chat_id}"
@@ -129,7 +129,7 @@ class Inline:
                 [
                     self.ikb(
                         text=_lang["add_me"],
-                        url=f"https://t.me/{app.username}?startgroup=true",
+                        url="https://t.me/TGSonicXbot?startgroup=true",
                     )
                 ]
             ]
@@ -294,7 +294,7 @@ class Inline:
             [
                 self.ikb(
                     text=lang["add_me"],
-                    url=f"https://t.me/{app.username}?startgroup=true",
+                    url="https://t.me/TGSonicXbot?startgroup=true",
                 )
             ],
             [self.ikb(text=lang["help"], callback_data="help")],
