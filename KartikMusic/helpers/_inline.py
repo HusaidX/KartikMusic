@@ -299,15 +299,15 @@ class Inline:
             ],
             [self.ikb(text=lang["help"], callback_data="help")],
             [
-                self.ikb(text="Updates • SonicXBots", url="https://t.me/SonicXBots"),
-                self.ikb(text="Powered by Apni Duniya", url="https://t.me/Apni_duniyax"),
+                self.ikb(text="Updates", url="https://t.me/SonicXBots"),
+                self.ikb(text="Support", url="https://t.me/Apni_duniyax"),
             ],
         ]
         if private:
             rows += [
                 [
                     self.ikb(
-                        text="Owner • Apni Duniya",
+                        text="Owner",
                         url="https://t.me/Apni_duniyax",
                     )
                 ]
