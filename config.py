@@ -36,7 +36,7 @@ class Config:
         self.SESSION3 = getenv("SESSION3", None)
 
         self.SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/SonicXBots")
-        self.SUPPORT_CHAT = getenv("UPPORT_CHAT", "nhttps://t.me/Apni_duniyax")
+        self.SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Apni_duniyax")
 
         self.AUTO_LEAVE: bool = getenv("AUTO_LEAVE", "False").lower() == "true"
         self.AUTO_END: bool = getenv("AUTO_END", "False").lower() == "true"
