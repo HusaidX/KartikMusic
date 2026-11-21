@@ -8,6 +8,7 @@
 # All rights reserved.
 #
 
+import random
 import time
 
 import psutil
@@ -42,7 +43,7 @@ async def _ping(_, m: types.Message):
     latency = round((time.time() - start) * 1000, 2)
     await sent.edit_media(
         media=types.InputMediaPhoto(
-            media=config.PING_IMG,
+            media=random.choice(config.START_IMGS),
             caption=m.lang["ping_pong"].format(
                 latency,
                 uptime,
